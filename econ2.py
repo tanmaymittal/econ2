@@ -27,6 +27,11 @@ def find_total_surplus(y_intercpt_demand, y_intercpt_quantity, base):
     return 0.5*(y_intercpt_demand - y_intercpt_quantity) * (base)
 
 
+def find_consumer_surplus(y_intercpt_demand, eq_y, base):
+    return 0.5*(y_intercpt_demand - eq_y) * (base)
+
+
+
 def main():
     print("------ Quantity DEMANDED ------")
     quantity_demanded_constant = float(input("Enter constant "))
@@ -78,6 +83,11 @@ def main():
 
     total_surplus = find_total_surplus(y_intercpt_demand, y_intercpt_quantity, z[0])
     print('Total Surplus iss: ', total_surplus)
+
+    consumer_surplus = find_consumer_surplus(y_intercpt_demand, z[1], z[0])
+    print('Total Consumer iss: ', consumer_surplus)
+
+
     #############
     # Area under graph for total surplus
     # 1/2 * (DC - SC) ( Quantity bc it is the x value AKA z[0])
