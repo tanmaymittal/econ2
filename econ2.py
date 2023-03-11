@@ -87,6 +87,7 @@ def main():
     consumer_surplus = find_consumer_surplus(y_intercpt_demand, z[1], z[0])
     print('Total Consumer iss: ', consumer_surplus)
 
+    print('Producer surplus: ', total_surplus - consumer_surplus)
 
     #############
     # Area under graph for total surplus
@@ -98,13 +99,13 @@ def main():
     """
     # Now to plot the demand and supply curve we have to inverse the equation
 
-    change = input('Is there a change in Demand or Supply at any price P?\t')
-    if change == 'Y' or 'y':
-        type_change = input ('Demand or Supply\t')
-        if type_change == 'D' or type_change == 'd':
-            demand_change()
-        elif type_change == 's' or type_change == 'S':
-            supply_change()
+    # change = input('Is there a change in Demand or Supply at any price P?\t')
+    # if change == 'Y' or 'y':
+    #     type_change = input ('Demand or Supply\t')
+    #     if type_change == 'D' or type_change == 'd':
+    #         demand_change()
+    #     elif type_change == 's' or type_change == 'S':
+    #         supply_change()
 
 
 main()
